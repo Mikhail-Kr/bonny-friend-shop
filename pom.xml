@@ -14,7 +14,7 @@
 	<name>bonnyfriend</name>
 	<description>ishop</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>16</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -98,10 +98,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>17</source>
-                    <target>17</target>
-                </configuration>
+				<configuration>
+					<source>15</source>
+					<target>16</target>
+				</configuration>
             </plugin>
         </plugins>
 	</build>

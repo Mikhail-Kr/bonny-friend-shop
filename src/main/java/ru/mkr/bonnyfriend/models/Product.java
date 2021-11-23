@@ -1,35 +1,36 @@
 package ru.mkr.bonnyfriend.models;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Objects;
 
 @Entity
 public class Product {
   @Id
-  @Column(unique = true, name = "id", nullable = false)
+  @Column(name = "id", nullable = false)
   private String id;
   @Column(name = "title")
   private String title;
   @Column(name = "description")
   private String description;
   @Column(name = "price", nullable = false)
-  private String price;
+  private BigDecimal price;
   @Column(name = "salePrice")
-  private String salePrice;
+  private BigDecimal salePrice;
 
-  public String getPrice() {
+  public BigDecimal getPrice() {
     return price;
   }
 
-  public void setPrice(String price) {
+  public void setPrice(BigDecimal price) {
     this.price = price;
   }
 
-  public String getSalePrice() {
+  public BigDecimal getSalePrice() {
     return salePrice;
   }
 
-  public void setSalePrice(String salePrice) {
+  public void setSalePrice(BigDecimal salePrice) {
     this.salePrice = salePrice;
   }
 
