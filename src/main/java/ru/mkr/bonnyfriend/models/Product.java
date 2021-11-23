@@ -2,6 +2,7 @@ package ru.mkr.bonnyfriend.models;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.net.URI;
 import java.util.Objects;
 
 @Entity
@@ -17,6 +18,51 @@ public class Product {
   private BigDecimal price;
   @Column(name = "salePrice")
   private BigDecimal salePrice;
+  @Column(name = "imagePath")
+  private URI imagePath;
+  @Column(name = "recall")
+  private String recall;
+  @Column(name = "specification")
+  private String specification;
+
+  public Product() {
+
+  }
+
+  public Product(String id, String title, String description, BigDecimal price, BigDecimal salePrice, URI image, String recall, String specification) {
+    this.id = id;
+    this.title = title;
+    this.description = description;
+    this.price = price;
+    this.salePrice = salePrice;
+    this.imagePath = image;
+    this.recall = recall;
+    this.specification = specification;
+  }
+
+  public URI getImagePath() {
+    return imagePath;
+  }
+
+  public void setImagePath(URI imagePath) {
+    this.imagePath = imagePath;
+  }
+
+  public String getRecall() {
+    return recall;
+  }
+
+  public void setRecall(String recall) {
+    this.recall = recall;
+  }
+
+  public String getSpecification() {
+    return specification;
+  }
+
+  public void setSpecification(String specification) {
+    this.specification = specification;
+  }
 
   public BigDecimal getPrice() {
     return price;
